@@ -3,7 +3,7 @@ Api that consumes transfer endpoints to demonstrate how to handle asynchronous  
 
 got to package com.imto.transfer.Server;
 
-Right click and run as a JavaApplication from Ide.
+Right click and run as a Java Application from Ide.
 
 Or Right click the project and Run as a Java Application from Ide.
 

@@ -104,17 +104,21 @@
  
 
 
-<build>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-war-plugin</artifactId>
-      <version>3.0.0</version>
-      <configuration>
-        <webappDirectory>src/main/webapp</webappDirectory>
-      </configuration>
-    </plugin>
-  </plugins>
-</build>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-war-plugin</artifactId>
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <configuration>
+                <attachClasses>true</attachClasses>
+                <webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
+            </configuration>
+            <goals>
+                <goal>inplace</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
   
 </project>

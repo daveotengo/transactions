@@ -3,6 +3,7 @@
   <groupId>com.imto</groupId>
   <artifactId>transactions</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
   <name>transactions</name>
   	<description>Application that processes Transactions Transfers especcially</description>
   
@@ -99,4 +100,21 @@
 		</dependency>
         
   </dependencies>
+  
+ 
+
+
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-war-plugin</artifactId>
+      <version>3.0.0</version>
+      <configuration>
+        <webappDirectory>src/main/webapp</webappDirectory>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+  
 </project>
